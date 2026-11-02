@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Catto Dynasty: Sunport Harbor</title>
+<style>
+:root{--bg:#f3eefc;--card:#fff;--tx:#231a3b;--mu:#6d6188;--pr:#7c3aed;--bd:#d8cdf1;--gold:#b7791f;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#150f26;--card:#211838;--tx:#f0eafc;--mu:#a99dc9;--pr:#a78bfa;--bd:#3b2e5f;--gold:#f5c451;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#150f26;--card:#211838;--tx:#f0eafc;--mu:#a99dc9;--pr:#a78bfa;--bd:#3b2e5f;--gold:#f5c451;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:15px/1.4 Georgia,"Times New Roman",serif}
+.w{max-width:480px;margin:0 auto;padding:12px}
+h1{font-size:22px;margin:4px 0 2px}
+.sub{color:var(--mu);font-size:13px;margin:0 0 10px}
+.pl{display:flex;gap:8px;margin-bottom:10px}
+.p{flex:1;background:var(--card);border:2px solid var(--bd);border-radius:10px;padding:6px 10px}
+.p.on{border-color:var(--pr)}
+.p b{display:block;font-size:13px}
+.p span{font-size:20px;color:var(--gold);font-weight:700}
+.bd{display:grid;grid-template:repeat(6,1fr)/repeat(6,1fr);gap:3px;aspect-ratio:1}
+.t{position:relative;background:var(--card);border:2px solid var(--bd);border-radius:6px;padding:8px 2px 2px;text-align:center;font:9px/1.15 system-ui,sans-serif;display:flex;flex-direction:column;justify-content:center;overflow:hidden}
+.t i{position:absolute;top:0;left:0;right:0;height:5px}
+.t b{font-weight:600}
+.t small{color:var(--mu);font-size:8px}
+.t em{font-style:normal;font-size:14px}
+.tk{display:flex;justify-content:center;gap:2px;margin-top:1px}
+.tk u{width:9px;height:9px;border-radius:50%;border:1px solid #fff}
+.c{grid-area:2/2/6/6;background:var(--card);border:2px solid var(--pr);border-radius:10px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:8px;gap:4px}
+.c .d{font-size:26px}
+.c .m{font-size:13px;color:var(--mu)}
+.c .r{font-size:12px}
+.ac{display:flex;gap:8px;margin:10px 0;flex-wrap:wrap}
+button{flex:1;min-height:46px;border:0;border-radius:10px;background:var(--pr);color:#fff;font:600 16px Georgia,serif;padding:0 14px}
+button.s{background:var(--card);color:var(--tx);border:2px solid var(--bd)}
+button:disabled{opacity:.4}
+.lg{font:13px/1.5 system-ui,sans-serif;color:var(--mu);margin:0;padding-left:18px}
+.lg li:first-child{color:var(--tx)}
+.lm{display:flex;align-items:center;justify-content:space-between;gap:10px;background:var(--card);border:2px solid var(--bd);border-radius:10px;padding:8px 12px;margin-top:8px}
+.lm small{color:var(--gold);font-size:16px;letter-spacing:2px}
+.lm button{flex:none;min-height:40px;font-size:14px}
+#cv .p{margin-bottom:0;flex:none}
+#cv>button{width:100%;margin-top:10px}
+.sc{border-radius:12px;padding:10px;margin-top:10px;overflow:hidden;position:relative}
+.sc.in{animation:rise .9s ease-out}
+@keyframes rise{from{transform:translateY(60px) scale(.9);opacity:0}to{transform:none;opacity:1}}
+.arr{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:#150f26cc;color:#fff;font-size:18px;z-index:2;animation:fade 1.4s forwards;pointer-events:none}
+@keyframes fade{0%,60%{opacity:1}100%{opacity:0}}
+@media (prefers-reduced-motion:reduce){.sc.in{animation:none}.arr{display:none}}
+.gr{display:grid;grid-template-columns:repeat(5,1fr);gap:6px}
+.pt{aspect-ratio:1;background:#ffffff55;border:2px dashed #fff8;border-radius:8px;position:relative;display:flex;align-items:flex-end;justify-content:center}
+.pt.sel{border:2px solid var(--pr);background:#ffffffaa}
+.pt small{align-self:center;font-size:22px;color:#fff}
+.pt em{position:absolute;top:0;left:2px;font-style:normal;font-size:9px;color:#b7791f}
+.sw{min-height:40px;border:2px solid #fff}
+.die{display:inline-grid;grid-template:repeat(3,1fr)/repeat(3,1fr);width:34px;height:34px;background:#fff;border-radius:8px;padding:4px;gap:1px;margin:0 3px;box-shadow:0 2px 0 #0004,inset 0 -2px 0 #0002;vertical-align:middle}.die i{border-radius:50%;background:transparent}.die i.o{background:#1f1630}.die.r{animation:dsp .16s linear infinite}@keyframes dsp{to{transform:rotate(360deg) scale(1.08)}}.die.l{animation:dpop .35s ease-out}@keyframes dpop{0%{transform:scale(1.5) rotate(-25deg)}100%{transform:none}}
+#tm,#tc,#ta{padding:0 6px;font-size:15px}
+h1+.ac{gap:4px;margin:4px 0 6px}#bm,#bs,#bp{flex:0 0 auto;min-height:0;padding:4px 9px;font:600 11px system-ui,sans-serif;border-width:1px;border-radius:8px}
+#tv{position:fixed;inset:0;z-index:99;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;font:600 20px Georgia,serif;overflow:hidden;background:radial-gradient(circle at 50% 45%,#4a2a9a,#0b0716 75%);transition:opacity .5s;animation:tvin .4s}
+@keyframes tvin{from{opacity:0}to{opacity:1}}
+#tv .st{position:absolute;height:2px;width:70px;background:linear-gradient(90deg,transparent,#fff);border-radius:2px;animation:wp var(--d) linear infinite}
+@keyframes wp{from{transform:translateX(110vw)}to{transform:translateX(-30vw)}}
+#tv .rt{position:relative;width:78%;max-width:420px;height:6px;background:#ffffff40;border-radius:3px;margin:46px 0 30px}
+#tv .dt{position:absolute;top:-5px;width:16px;height:16px;border-radius:50%;background:#f5c451;box-shadow:0 0 12px #f5c451}
+#tv .hero{position:absolute;top:-48px;left:0;animation:go 2.6s .2s ease-in-out forwards}
+@keyframes go{from{left:0}to{left:calc(100% - 52px)}}
+#tv .bob{animation:bob .5s ease-in-out infinite alternate}
+@keyframes bob{from{transform:translateY(0)}to{transform:translateY(-8px)}}
+#tv .ar{animation:fi .6s 1.6s both}#tv small{position:absolute;bottom:22px;font:12px system-ui,sans-serif;opacity:.6}
+@keyframes fi{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){#tv .st{display:none}#tv .hero,#tv .bob{animation:none}}
+.die.k1{background:linear-gradient(#f0f9ff,#7dd3fc)}.die.k1 i.o{background:#0c4a6e}
+.die.k2{background:linear-gradient(#fde68a,#d97706)}.die.k2 i.o{background:#451a03}
+.die.k3{background:#0b1020;box-shadow:0 0 10px #22d3ee,inset 0 0 0 2px #22d3ee}.die.k3 i.o{background:#22d3ee;box-shadow:0 0 6px #22d3ee}
+.dk{display:flex;gap:6px;flex-wrap:wrap;margin:4px 0}.dk button{flex:0 0 auto;min-height:0;padding:6px 10px;font:600 12px system-ui,sans-serif;border-radius:8px}
+#rk{position:fixed;inset:0;z-index:99;overflow:hidden;color:#fff;font:600 20px Georgia,serif;animation:tvin .4s;transition:opacity .5s}
+#rk .lay{position:absolute;inset:0}
+#rk .osk{animation:oskf 9.5s both}@keyframes oskf{0%,14%{opacity:1}36%,100%{opacity:0}}
+#rk .dsk{opacity:0;animation:dskf 9.5s both}@keyframes dskf{0%,48%{opacity:0}66%,100%{opacity:1}}
+#rk .sxw{animation:sxwf 9.5s both}@keyframes sxwf{0%,16%{opacity:0}24%,56%{opacity:1}68%,100%{opacity:0}}
+#rk .sx{position:absolute;top:0;width:2px;height:46px;background:linear-gradient(transparent,#fff);animation:sxd var(--d) linear infinite}
+@keyframes sxd{from{transform:translateY(-20vh)}to{transform:translateY(120vh)}}
+#rk .gnd{position:absolute;left:0;right:0;bottom:0;height:26vh;transform-origin:50% 100%}
+#rk .g0{animation:g0f 9.5s ease-in both}@keyframes g0f{0%,16%{transform:none}38%,100%{transform:translateY(105%)}}
+#rk .g1{animation:g1f 9.5s ease-out both}@keyframes g1f{0%,48%{transform:translateY(105%) scale(.6)}80%,100%{transform:none}}
+#rk .rkt{position:absolute;left:50%;bottom:20%;width:64px;height:140px;margin-left:-32px;animation:rfly 9.5s ease-in-out both}
+@keyframes rfly{0%,17%{transform:none}40%,80%{transform:translateY(-42vh)}95%,100%{transform:none}}
+#rk .rs{position:relative;width:100%;height:100%;animation:shk .08s linear 0s 48 alternate}
+@keyframes shk{from{transform:translate(-1.5px,0)}to{transform:translate(1.5px,1px)}}
+#rk .rs svg{width:100%;height:100%;display:block}
+#rk .pil{position:absolute;left:19px;top:49px;line-height:0}
+#rk .fl{position:absolute;left:50%;top:106px;width:20px;height:50px;margin-left:-10px;border-radius:50% 50% 60% 60%/20% 20% 80% 80%;background:linear-gradient(#fff,#ffd54a 30%,#ff6a00 70%,transparent);transform-origin:50% 0;opacity:0;animation:flk .09s ease-in-out infinite alternate,flm 9.5s both}
+@keyframes flk{from{transform:scaleY(.8)}to{transform:scaleY(1.3)}}
+@keyframes flm{0%,10%{opacity:0}14%,80%{opacity:1}94%{opacity:.8}100%{opacity:0}}
+#rk .dust{position:absolute;left:50%;bottom:19%;width:90px;height:24px;margin-left:-45px;border-radius:50%;background:#fff9;filter:blur(5px);opacity:0;animation:dst 9.5s both}
+@keyframes dst{0%,92%{opacity:0;transform:scale(.3)}95%{opacity:.9;transform:scale(1)}100%{opacity:0;transform:scale(3,1.6)}}
+#rk .cd{position:absolute;top:30%;left:0;right:0;text-align:center;font-size:72px}
+#rk .cd span{position:absolute;left:0;right:0;opacity:0;animation:cdn .55s both}
+@keyframes cdn{0%{opacity:0;transform:scale(1.7)}30%,75%{opacity:1;transform:none}100%{opacity:0}}
+#rk .cap{position:absolute;top:12%;left:0;right:0;text-align:center;padding:0 16px;opacity:0;text-shadow:0 2px 8px #000a;animation:capk both}
+@keyframes capk{0%{opacity:0;transform:translateY(10px)}12%,85%{opacity:1;transform:none}100%{opacity:0}}
+#rk small{position:absolute;bottom:10px;left:0;right:0;text-align:center;font:12px system-ui,sans-serif;opacity:.55;z-index:5}
+@media (prefers-reduced-motion:reduce){#rk *{animation:none!important}#rk .cap{opacity:0}#rk .c4{opacity:1}#rk .g0,#rk .sxw,#rk .osk,#rk .cd{display:none}#rk .dsk{opacity:1}#rk .rkt{transform:none}}
+.wb{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:12px;margin:10px 0}.wb .wr{display:flex;justify-content:space-between;align-items:center;gap:8px;margin:6px 0;font-size:13px}.wb .wr small{display:block;color:var(--mu);font-size:11px}.wb button{min-height:0;padding:6px 12px;font-size:12px;border-radius:8px}
+.dc{position:absolute;right:0;bottom:0;width:40%;height:40%;pointer-events:none}
+.cp{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;margin:8px 0;max-height:180px;overflow-y:auto}
+.cp div{background:var(--card);border:2px solid var(--bd);border-radius:10px;padding:4px 2px;text-align:center;font:11px system-ui,sans-serif}
+.cp div.on{border-color:var(--pr)}
+.tk u.ch{width:16px;height:16px;border:0;background:none}
+.al{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:10px}
+.al div{aspect-ratio:1.3;display:flex;align-items:center;justify-content:center;text-align:center;background:var(--card);border:2px dashed var(--bd);border-radius:10px;font:13px system-ui,sans-serif;color:var(--mu)}
+.al div.on{border:2px solid var(--pr);color:var(--tx)}
+</style></head>
+<body><div class="w">
+<h1>Catto Dynasty</h1>
+<div class="ac" style="margin-bottom:6px"><button class="s" id="bm" onclick="tgm()">🎵 Music</button><button class="s" id="bs" onclick="tgs()">🔊 Sound</button><button class="s" id="bp" onclick="pv()">🚀 Preview travel</button></div>
+<p class="sub">Prototype: Sunport Harbor. Free play, no blockchain yet.</p>
+<p class="sub" style="margin-bottom:2px">Your character</p><div class="cp" id="cp"></div><p class="sub" style="margin:6px 0 2px">Dice skin</p><div class="dk" id="dk"></div>
+<div class="ac"><button id="tm" onclick="tab('m')">Match</button><button id="tc" class="s" onclick="tab('c')">My City</button><button id="ta" class="s" onclick="tab('a')">Dynasty Vault</button></div>
+<div id="mv"><div class="pl" id="pl"></div>
+<div class="bd" id="bd"></div>
+<div class="ac" id="ac"></div>
+<ul class="lg" id="lg"></ul></div>
+<div id="cv" hidden></div><div id="av" hidden></div>
+</div>
+<script>
+const D={h:'#2a9d8f',m:'#e9a23b',o:'#d6577e',t:'#8b5cf6'};
+const T=[{n:'Start',k:'s'},{n:'Lighthouse',k:'p',d:'h',p:60},{n:'Fish Market',k:'p',d:'h',p:60},{n:'Event',k:'e'},{n:'Dock Crane',k:'p',d:'h',p:80},{n:'Rest Stop',k:'r'},{n:'Ferry Terminal',k:'p',d:'m',p:100},{n:'Harbor Hotel',k:'p',d:'m',p:100},{n:'Tax',k:'x'},{n:'Spice Stall',k:'p',d:'m',p:120},{n:'Timeout',k:'j'},{n:'Clock Tower',k:'p',d:'o',p:140},{n:'Fountain Sq',k:'p',d:'o',p:140},{n:'Event',k:'e'},{n:'Bank House',k:'p',d:'o',p:160},{n:'Bonus Hub',k:'b'},{n:'Sky Tower',k:'p',d:'t',p:180},{n:'Grand Plaza',k:'p',d:'t',p:180},{n:'Event',k:'e'},{n:'Royal Quay',k:'p',d:'t',p:200}];
+const IC={s:'🏁',e:'❓',r:'☕',x:'💸',j:'⏳',b:'🎁'};
+const EV=[['Harbor festival! +120',120],['Storm damage. -80',-80],['Found a treasure chest! +100',100],['Repair bill. -60',-60]];
+const pos=i=>i<=5?[5-i,0]:i<=10?[0,i-5]:i<=15?[i-10,5]:[5,5-(i-15)];
+let P,own,lv,turn,round,over,L,msg,dice;
+const $=id=>document.getElementById(id);
+const sleep=ms=>new Promise(r=>setTimeout(r,ms));
+const rnd=n=>Math.floor(Math.random()*n);
+const PIPS=[[],[4],[0,8],[0,4,8],[0,2,6,8],[0,2,4,6,8],[0,2,3,5,6,8]];
+function die(n,c){return `<span class="die ${c}">${[0,1,2,3,4,5,6,7,8].map(j=>`<i class="${PIPS[n].includes(j)?'o':''}"></i>`).join('')}</span>`}
+function dHTML(a,b,r){const c=r?'r':'l';return die(a,c)+die(b,c)}
+function init(){P=[{n:'You',c:1500,p:0,s:0,col:'#7c3aed'},{n:'Bot',c:1500,p:0,s:0,col:'#f59e0b'}];own={};lv={};turn=0;round=1;over=false;L=['Your turn. Roll the dice!'];msg='Tap Roll to begin';dice='🎲';render();ask([['Roll dice',roll]])}
+function rent(i){const t=T[i];let r=Math.round(t.p*.1);if(lv[i])r=Math.round(r*1.8);const o=own[i];const g=T.map((x,j)=>x.d===t.d?j:-1).filter(j=>j>=0);if(g.every(j=>own[j]===o))r*=2;return r}
+function log(m){L.unshift(m);L=L.slice(0,6);$('lg').innerHTML=L.map(x=>'<li>'+x+'</li>').join('')}
+function render(){
+$('pl').innerHTML=P.map((p,i)=>`<div class="p ${turn===i&&!over?'on':''}"><b>${p.n} · round ${Math.min(round,20)}/20</b><span>${p.c}</span></div>`).join('');
+let h='';
+T.forEach((t,i)=>{const [r,c]=pos(i);const o=own[i];const col=o!==undefined?P[o].col:'';
+const st=t.k==='p'?`<small>${o!==undefined?'rent '+rent(i)+(lv[i]?' ★':''):t.p}</small>`:'';
+const tk=P.map((p,pi)=>p.p===i?(pi===0?`<u class="ch">${cz(G.ch||0,16)}</u>`:`<u style="background:${p.col}"></u>`):'').join('');
+h+=`<div class="t" style="grid-row:${r+1};grid-column:${c+1};${col?'border-color:'+col:''}">${t.d?`<i style="background:${D[t.d]}"></i>`:''}${IC[t.k]?`<em>${IC[t.k]}</em>`:''}<b>${t.n}</b>${st}<div class="tk">${tk}</div></div>`});
+h+=`<div class="c"><div class="d">${dice}</div><div class="m">${msg}</div></div>`;
+$('bd').innerHTML=h;$('lg').innerHTML=L.map(x=>'<li>'+x+'</li>').join('')}
+function ask(opts){return new Promise(res=>{const a=$('ac');a.innerHTML='';opts.forEach(([t,f,s])=>{const b=document.createElement('button');b.textContent=t;if(s)b.className='s';b.onclick=()=>{a.innerHTML='';res(f&&f())};a.appendChild(b)})})}
+async function roll(){if(over)return;await play()}
+async function play(){
+const me=P[turn];
+if(me.s>0){me.s--;log(me.n+' skips this turn');msg=me.n+' skips';render();await sleep(700);return end()}
+const a=1+rnd(6),b=1+rnd(6);for(let k=0;k<7;k++){dice=dHTML(1+rnd(6),1+rnd(6),1);msg=me.n+' rolls...';render();await sleep(80)}dice=dHTML(a,b,0);msg=me.n+' rolled '+(a+b);render();await sleep(500);
+for(let s=0;s<a+b;s++){me.p=(me.p+1)%20;if(me.p===0){me.c+=200;log(me.n+' passed Start: +200')}render();await sleep(110)}
+await land(me);end()}
+async function land(me){
+const i=me.p,t=T[i],bot=me===P[1];
+if(t.k==='p'){
+const o=own[i];
+if(o===undefined){
+if(me.c<t.p){log(me.n+' cannot afford '+t.n);msg='Not enough coins';}
+else{let buy;
+if(bot)buy=me.c>=t.p+250;
+else{msg='Buy '+t.n+' for '+t.p+'?';render();buy=await ask([['Buy for '+t.p,()=>true],['Skip',()=>false,1]])}
+if(buy){me.c-=t.p;own[i]=P.indexOf(me);log(me.n+' bought '+t.n);msg=me.n+' owns '+t.n}else{log(me.n+' skipped '+t.n);msg='Skipped'}}
+}else if(P[o]!==me){const r=Math.min(rent(i),Math.max(me.c,0)+0);const pay=rent(i);me.c-=pay;P[o].c+=pay;log(me.n+' paid '+pay+' rent to '+P[o].n);msg='Rent: '+pay}
+else if(!lv[i]){const cost=Math.round(t.p/2);
+if(me.c>=cost){let up;
+if(bot)up=me.c>=cost+300;
+else{msg='Upgrade '+t.n+' for '+cost+'?';render();up=await ask([['Upgrade for '+cost,()=>true],['Not now',()=>false,1]])}
+if(up){me.c-=cost;lv[i]=1;log(me.n+' upgraded '+t.n);msg='Upgraded! ★'}}}
+}else if(t.k==='e'){const e=EV[rnd(EV.length)];me.c+=e[1];log(me.n+': '+e[0]);msg=e[0]}
+else if(t.k==='x'){me.c-=100;log(me.n+' paid tax: -100');msg='Tax: -100'}
+else if(t.k==='j'){me.s=1;log(me.n+' lands in Timeout');msg='Timeout: skip next turn'}
+else if(t.k==='b'){me.c+=50;log(me.n+' got a bonus: +50');msg='Bonus +50'}
+else if(t.k==='r'){msg='Rest stop. Relax.'}
+render();await sleep(700)}
+async function end(){
+const lose=P.findIndex(p=>p.c<0);
+if(lose>=0)return fin(P[1-lose].n+' wins! '+P[lose].n+' went bankrupt.');
+turn=1-turn;
+if(turn===0){round++;if(round>20){const w=P[0].c>=P[1].c?P[0]:P[1];return fin(w.n+' wins with '+w.c+' coins after 20 rounds!')}}
+render();
+if(turn===1){await sleep(600);await play()}
+else{msg='Your turn';render();ask([['Roll dice',roll]])}}
+function fin(m){over=true;msg=m;log(m);const r=m.startsWith('You')?400:100;G.coins+=r;save();log('+'+r+' coins for My City');render();ask([['Play again',init],['My City',()=>tab('c'),1]])}
+const CITIES=[{n:'Sunport Harbor',m:1,l:['Beacon Tower','Net Loft','Tide Crane','Salt Quay','Pearl Hall']},{n:'Goldleaf Market',m:3,l:['Bell Arcade','Saffron Row','Lantern Hall','Coin Fountain','Weigh House']},{n:'Neon Circuit',m:9,l:['Signal Spire','Gear Works','Sky Tram','Glow Plaza','Core Vault']}];
+let G={coins:0,city:0,lv:[0,0,0,0,0]};
+try{const s=JSON.parse(localStorage.getItem('cd1'));if(s&&s.lv)G=s}catch(e){}
+function save(){try{localStorage.setItem('cd1',JSON.stringify(G))}catch(e){}}
+function tab(t){$('mv').hidden=t!=='m';$('cv').hidden=t!=='c';$('tm').className=t==='m'?'':'s';$('tc').className=t==='c'?'':'s';if(t==='c')city()}
+function cost(l){return [200,400,800][l]*CITIES[G.city].m}
+function city(){const C=CITIES[G.city];const done=G.lv.every(x=>x===3);
+let h=`<div class="p"><b>${C.n}</b><span>${G.coins} coins</span></div>`;
+C.l.forEach((n,i)=>{const l=G.lv[i];h+=`<div class="lm"><div><b>${n}</b><br><small>${'★'.repeat(l)+'☆'.repeat(3-l)}</small></div>${l<3?`<button ${G.coins<cost(l)?'disabled':''} onclick="up(${i})">Upgrade ${cost(l)}</button>`:'<span>Max</span>'}</div>`});
+if(done)h+=G.city<CITIES.length-1?`<button onclick="nxt()">City complete! Unlock ${CITIES[G.city+1].n}</button>`:'<p class="lg">All cities complete. More coming soon!</p>';
+else h+='<p class="lg">Win matches to earn coins: win +400, loss +100.</p>';
+$('cv').innerHTML=h}
+function up(i){const c=cost(G.lv[i]);if(G.coins>=c){G.coins-=c;G.lv[i]++;save();city()}}
+function nxt(){G.city++;G.lv=[0,0,0,0,0];save();city()}
+if(!G.plots)G.plots=Array(10).fill(null);
+let sel=null,first=true;
+const COL=['#8b5cf6','#2a9d8f','#e9a23b','#d6577e','#4aa3df','#5b6b8c'];
+const BASE=[100,120,150,180,220];
+const SKY=[['#ffd9a8','#8fc9f0'],['#ffe7a1','#f5a3b8'],['#2b1a5c','#0b1f4d']];
+function bz(t,c,l){const h=30+l*10,g=h/1.5,d=h/1.4;
+const s=[`<rect x="20" y="${60-h}" width="20" height="${h}" fill="${c}"/><polygon points="16,${60-h} 44,${60-h} 30,${48-h}" fill="${c}" opacity=".7"/>`,
+`<rect x="8" y="${60-g}" width="44" height="${g}" fill="${c}"/><polygon points="4,${60-g} 56,${60-g} 30,${42-g}" fill="${c}" opacity=".7"/>`,
+`<rect x="14" y="${60-h}" width="8" height="${h}" fill="${c}"/><rect x="14" y="${60-h}" width="36" height="6" fill="${c}" opacity=".7"/><rect x="46" y="${60-h}" width="3" height="${h/2}" fill="${c}"/>`,
+`<rect x="4" y="46" width="52" height="14" fill="${c}"/>`+Array.from({length:l+1},(_,i)=>`<rect x="${10+i*12}" y="${36-i*2}" width="6" height="10" fill="${c}" opacity=".7"/>`).join(''),
+`<rect x="12" y="${60-d}" width="36" height="${d}" fill="${c}"/><ellipse cx="30" cy="${60-d}" rx="18" ry="${10+l*2}" fill="${c}" opacity=".7"/>`];
+return `<svg viewBox="0 0 60 64" width="100%" height="100%">${s[t]}<rect x="26" y="50" width="8" height="10" fill="#0003"/></svg>`}
+function tab(t){first=t==='c';$('mv').hidden=t!=='m';$('cv').hidden=t!=='c';$('tm').className=t==='m'?'':'s';$('tc').className=t==='c'?'':'s';if(t==='c')city()}
+function city(){const C=CITIES[G.city],K=SKY[G.city]||SKY[0];
+const done=G.plots.every(p=>p&&p.l>=2);
+let h=`<div class="p"><b>${C.n}</b><span>${G.coins} coins</span></div>`;
+h+=`<div class="sc ${first?'in':''}" style="background:linear-gradient(${K[1]},${K[0]})">${first?`<div class="arr">Arriving at ${C.n}…</div>`:''}<div class="gr">`;
+G.plots.forEach((p,i)=>{h+=`<div class="pt ${sel===i?'sel':''}" onclick="pick(${i})">${p?bz(p.t,p.c,p.l):'<small>+</small>'}${p?`<em>${'★'.repeat(p.l)}</em>`:''}</div>`});
+h+='</div></div>';first=false;
+const p=sel!==null?G.plots[sel]:null;
+if(sel===null)h+='<p class="lg">Tap a plot to start building.</p>';
+else if(!p)h+=`<p class="lg">Choose a building for plot ${sel+1}:</p><div class="ac">`+C.l.map((n,t)=>`<button class="s" ${G.coins<BASE[t]*C.m?'disabled':''} onclick="bld(${t})">${n} ${BASE[t]*C.m}</button>`).join('')+'</div>';
+else{h+=`<p class="lg">${C.l[p.t]}: pick a colour (20 coins) or upgrade.</p><div class="ac">`+COL.map(c=>`<button class="sw" style="background:${c}" onclick="clr('${c}')"></button>`).join('')+'</div>';
+h+=p.l<3?`<button ${G.coins<up2()?'disabled':''} onclick="upg()">Upgrade ${up2()}</button>`:'<p class="lg">Max level.</p>'}
+if(done)h+=G.city<CITIES.length-1?`<button onclick="nxt()">City complete! Travel to ${CITIES[G.city+1].n}</button>`:'<p class="lg">All cities complete!</p>';
+else h+='<p class="lg">Build all 10 plots to level 2 to unlock the next city. Win matches to earn coins.</p>';
+$('cv').innerHTML=h}
+function pick(i){sel=i;city()}
+function bld(t){const c=BASE[t]*CITIES[G.city].m;if(G.coins>=c){G.coins-=c;G.plots[sel]={t,c:COL[0],l:1};save();city()}}
+function clr(c){const p=G.plots[sel];if(p&&p.c!==c&&G.coins>=20){G.coins-=20;p.c=c;save();city()}}
+function up2(){const p=G.plots[sel];return p?BASE[p.t]*CITIES[G.city].m*p.l:0}
+function upg(){const c=up2();if(G.coins>=c){G.coins-=c;G.plots[sel].l++;save();city()}}
+function nxt(){G.city++;G.plots=Array(10).fill(null);sel=null;first=true;save();city()}
+function bz(t,c,l){const W=(x,y)=>`<rect x="${x}" y="${y}" width="4" height="5" rx="1" fill="${l>1?'#ffe08a':'#ffffffaa'}"/>`,sh='fill="#0003"',D=`<rect x="26" y="50" width="8" height="10" rx="3" fill="#0006"/>`;let b='<ellipse cx="30" cy="61" rx="27" ry="3" fill="#0003"/>';
+if(t===0){const h=26+l*10,y=60-h;b+=`<rect x="21" y="${y}" width="18" height="${h}" fill="${c}"/><rect x="21" y="${y}" width="6" height="${h}" ${sh}/><polygon points="18,${y} 42,${y} 30,${y-14}" fill="${c}"/><polygon points="30,${y-14} 42,${y} 30,${y}" ${sh}/>`;for(let i=0;i<l+1;i++)b+=W(28,y+6+i*10);if(l>2)b+=`<rect x="30" y="${y-23}" width="1.5" height="9" fill="#fff"/><polygon points="31.5,${y-23} 39,${y-20} 31.5,${y-17}" fill="#ffd166"/>`}
+else if(t===1){const h=18+l*7,y=60-h;b+=`<rect x="44" y="${y-12}" width="5" height="12" fill="${c}"/><rect x="8" y="${y}" width="44" height="${h}" fill="${c}"/><rect x="8" y="${y}" width="44" height="4" ${sh}/><polygon points="4,${y} 56,${y} 30,${y-14-l*2}" fill="${c}"/><polygon points="30,${y-14-l*2} 56,${y} 30,${y}" ${sh}/>${D}`;for(let r=0;r<l;r++){b+=W(13,y+6+r*9)+W(21,y+6+r*9)+W(35,y+6+r*9)+W(43,y+6+r*9)}}
+else if(t===2){const h=16+l*6,y=60-h;b+=`<rect x="8" y="${y}" width="28" height="${h}" fill="${c}"/><rect x="8" y="${y}" width="28" height="4" ${sh}/><rect x="40" y="${y-14}" width="4" height="${h+14}" fill="${c}"/><rect x="18" y="${y-14}" width="26" height="3" fill="${c}"/><rect x="20" y="${y-11}" width="1" height="9" fill="#fff"/><rect x="17" y="${y-3}" width="7" height="5" fill="#ffd166"/>`;for(let r=0;r<l;r++)b+=W(12,y+6+r*8)+W(24,y+6+r*8)}
+else if(t===3){b+=`<rect x="4" y="46" width="52" height="14" fill="${c}"/><rect x="4" y="56" width="52" height="4" ${sh}/>`;for(let i=0;i<l+2;i++){const x=6+i*(44/(l+2));b+=`<rect x="${x}" y="36" width="${44/(l+2)}" height="10" fill="${i%2?'#fff':c}"/><rect x="${x}" y="36" width="${44/(l+2)}" height="10" ${i%2?'fill="#0001"':sh}/>`}b+=`<rect x="6" y="46" width="2" height="14" fill="#0006"/><rect x="52" y="46" width="2" height="14" fill="#0006"/>`;if(l>2)b+=`<rect x="29" y="24" width="1.5" height="12" fill="#fff"/><polygon points="30.5,24 38,27 30.5,30" fill="#ffd166"/>`}
+else{const h=22+l*8,y=60-h,w=14+l*3,wy=60-(16+l*4);b+=`<rect x="4" y="${wy}" width="14" height="${16+l*4}" fill="${c}"/><rect x="42" y="${wy}" width="14" height="${16+l*4}" fill="${c}"/><polygon points="2,${wy} 20,${wy} 11,${wy-7}" fill="${c}"/><polygon points="40,${wy} 58,${wy} 49,${wy-7}" fill="${c}"/><rect x="16" y="${y}" width="28" height="${h}" fill="${c}"/><rect x="16" y="${y}" width="28" height="4" ${sh}/><path d="M18 ${y} Q30 ${y-10-l*3} 42 ${y}Z" fill="${c}"/><path d="M30 ${y-5-l*1.5} Q42 ${y-2} 42 ${y}H30Z" ${sh}/>${D}`;for(let r=0;r<l;r++)b+=W(20,y+6+r*9)+W(36,y+6+r*9);b+=`<rect x="18" y="${y+h-12}" width="2" height="12" fill="#fff8"/><rect x="40" y="${y+h-12}" width="2" height="12" fill="#fff8"/>`;b+=W(8,wy+5)+W(46,wy+5)}
+return `<svg viewBox="0 0 60 64" width="100%" height="100%">${b}</svg>`}
+const DC=[['Tree',40],['Fountain',80],['Lamp',30],['Flowers',25],['Banner',50]];
+function dz(d,c){return [
+`<rect x="9" y="12" width="2" height="8" fill="#7a4a21"/><circle cx="10" cy="8" r="6.5" fill="#2f9e55"/><circle cx="8" cy="6.5" r="3" fill="#5cc47a"/>`,
+`<ellipse cx="10" cy="17" rx="8" ry="3" fill="#8fc4e8"/><rect x="9" y="8" width="2" height="9" fill="#cfd8e3"/><path d="M10 8Q4 8 4 14M10 8Q16 8 16 14" stroke="#8fc4e8" fill="none" stroke-width="1.4"/>`,
+`<rect x="9" y="7" width="1.6" height="13" fill="#44445a"/><circle cx="9.8" cy="5.5" r="3.5" fill="#ffe08a"/>`,
+`<rect x="5" y="12" width="1" height="8" fill="#2f9e55"/><rect x="10" y="10" width="1" height="10" fill="#2f9e55"/><rect x="15" y="13" width="1" height="7" fill="#2f9e55"/><circle cx="5.5" cy="11" r="2.5" fill="#e86a92"/><circle cx="10.5" cy="9" r="2.5" fill="#ffd166"/><circle cx="15.5" cy="12" r="2.5" fill="#a78bfa"/>`,
+`<rect x="4" y="2" width="1.6" height="18" fill="#44445a"/><polygon points="5.6,3 17,6.5 5.6,10" fill="${c}"/>`][d]}
+const city0=city;
+city=function(){city0();
+document.querySelectorAll('#cv .pt').forEach((el,i)=>{const p=G.plots[i];if(p&&p.d!=null)el.insertAdjacentHTML('beforeend',`<svg class="dc" viewBox="0 0 20 20">${dz(p.d,p.c)}</svg>`)});
+const p=sel!==null?G.plots[sel]:null;
+if(p)$('cv').insertAdjacentHTML('beforeend','<p class="lg">Decorate this plot:</p><div class="ac">'+DC.map((x,i)=>`<button class="s" ${G.coins<x[1]?'disabled':''} onclick="dec(${i})">${x[0]} ${x[1]}</button>`).join('')+'</div>')};
+function dec(i){const p=G.plots[sel];if(p&&G.coins>=DC[i][1]){G.coins-=DC[i][1];p.d=i;save();city()}}
+const CH=[{n:'Fox',c:'#e8833a',a:'f'},{n:'Owl',c:'#8b6f47',a:'o'},{n:'Bear',c:'#7c4f2e',a:'b'},{n:'Hare',c:'#c9a7e8',a:'h'},{n:'Otter',c:'#4aa3df',a:'t'}];
+function cz(i,s){const k=CH[i],c=k.c;let e='';
+if(k.a==='f')e=`<polygon points="6,16 8,4 16,12" fill="${c}"/><polygon points="34,16 32,4 24,12" fill="${c}"/><ellipse cx="20" cy="22" rx="13" ry="11" fill="${c}"/><ellipse cx="20" cy="27" rx="7" ry="5" fill="#fff"/>`;
+else if(k.a==='o')e=`<polygon points="8,10 12,3 16,10" fill="${c}"/><polygon points="32,10 28,3 24,10" fill="${c}"/><ellipse cx="20" cy="22" rx="13" ry="13" fill="${c}"/><circle cx="14" cy="20" r="6" fill="#fff"/><circle cx="26" cy="20" r="6" fill="#fff"/><polygon points="17,26 23,26 20,31" fill="#e9a23b"/>`;
+else if(k.a==='b')e=`<circle cx="9" cy="10" r="5" fill="${c}"/><circle cx="31" cy="10" r="5" fill="${c}"/><ellipse cx="20" cy="22" rx="14" ry="12" fill="${c}"/><ellipse cx="20" cy="27" rx="6" ry="4.5" fill="#d9b38c"/>`;
+else if(k.a==='h')e=`<ellipse cx="13" cy="8" rx="4" ry="9" fill="${c}"/><ellipse cx="27" cy="8" rx="4" ry="9" fill="${c}"/><ellipse cx="20" cy="24" rx="12" ry="11" fill="${c}"/><ellipse cx="20" cy="28" rx="4" ry="3" fill="#fff"/>`;
+else e=`<circle cx="9" cy="12" r="4" fill="${c}"/><circle cx="31" cy="12" r="4" fill="${c}"/><ellipse cx="20" cy="23" rx="13" ry="11" fill="${c}"/><ellipse cx="20" cy="28" rx="8" ry="5" fill="#e6d3b8"/>`;
+const o=k.a==='o',ey=`<circle cx="14" cy="20" r="${o?2.5:2}" fill="#231a3b"/><circle cx="26" cy="20" r="${o?2.5:2}" fill="#231a3b"/>`,ns=o?'':`<ellipse cx="20" cy="26" rx="2" ry="1.5" fill="#231a3b"/>`;
+return `<svg viewBox="0 0 40 40" width="${s}" height="${s}">${e}${ey}${ns}</svg>`}
+function cpick(){$('cp').innerHTML=CH.map((k,i)=>`<div class="${(G.ch||0)===i?'on':''}" onclick="setch(${i})">${cz(i,44)}<br>${k.n}</div>`).join('')}
+function setch(i){G.ch=i;save();cpick();render()}
+if(!G.st)G.st=Array(9).fill(0);
+const SN=['Harbor Lamp','Silver Fish','Paper Boat','Golden Key','Moon Shell','Tiny Crane','Sun Coin','Rope Knot','Star Chart'];
+function tab(t){first=t==='c';['m','c','a'].forEach(k=>{$({m:'mv',c:'cv',a:'av'}[k]).hidden=k!==t;$({m:'tm',c:'tc',a:'ta'}[k]).className=k===t?'':'s'});if(t==='c')city();if(t==='a')album()}
+function album(){const n=G.st.filter(x=>x>0).length;$('av').innerHTML=`<div class="p" style="margin-top:10px"><b>Dynasty Vault</b><span>${n}/9 · sets ${G.sets||0}</span></div><div class="al">`+SN.map((s,i)=>`<div class="${G.st[i]?'on':''}">${G.st[i]?`<span><b>${s}</b><br>x${G.st[i]}</span>`:'?'}</div>`).join('')+'</div><p class="lg">Each finished match drops a sticker. Complete all 9 for +500 coins. Trading duplicates comes in a later version.</p>'}
+const fin0=fin;fin=function(m){fin0(m);const i=rnd(9);G.st[i]++;let t='Sticker: '+SN[i];if(G.st.every(x=>x>0)){G.coins+=500;G.sets=(G.sets||0)+1;G.st=G.st.map(x=>x-1);t+='. Vault set complete! +500 coins'}save();log(t);render()};
+T[3]={n:'Raid',k:'a'};T[13]={n:'Explore',k:'v'};IC.a='🏴';IC.v='🧭';
+async function raid(me){const bot=me===P[1];
+const R=[['Wooden Dock',70,40],['Stone Quay',50,80],['Guard Tower',30,150]];
+let i;if(bot)i=rnd(3);else{msg='Raid a rival city! Pick a target';render();i=await ask(R.map((r,k)=>[r[0]+': '+r[1]+'% for +'+r[2],()=>k,1]))}
+const r=R[i];
+if(rnd(100)<r[1]){me.c+=r[2];log(me.n+' raided the '+r[0]+': +'+r[2]);msg='Raid success! +'+r[2]}else{me.c-=30;log(me.n+' failed to raid the '+r[0]+': -30');msg='Raid failed. -30'}
+render();await sleep(800)}
+async function explore(me){const bot=me===P[1];
+const X=[['Safe trail: +40',100,40,0],['Risky ridge: 50% for +120, else -60',50,120,60],['Hidden cave: 30% for +250, else -80',30,250,80]];
+let i;if(bot)i=rnd(3);else{msg='Explore! Pick a path';render();i=await ask(X.map((x,k)=>[x[0],()=>k,1]))}
+const x=X[i];
+if(rnd(100)<x[1]){me.c+=x[2];log(me.n+' explored: +'+x[2]);msg='Found loot! +'+x[2]}else{me.c-=x[3];log(me.n+' got lost: -'+x[3]);msg='Got lost! -'+x[3]}
+render();await sleep(800)}
+const land0=land;land=async function(me){const k=T[me.p].k;if(k==='a')return raid(me);if(k==='v')return explore(me);return land0(me)};
+const PI=[1,2,4,6,7,9,11,12,14,16,17,19],SI=[5,8,10,15];
+const BN=[null,{p:['Spice Lane','Silk Row','Dye Works','Camel Yard','Lantern Inn','Brass Bazaar','Carpet Hall','Saffron Gate','Coin Exchange','Palace Steps','Golden Dome','Merchant Palace'],s:['Tea House','Customs','Locked Gate','Treasure Cart'],d:{h:'#d97706',m:'#b45309',o:'#dc2626',t:'#a16207'}},{p:['Pixel Alley','Wire Market','Relay Dock','Hover Depot','Glow Hotel','Chip Stall','Server Row','Laser Plaza','Cipher Bank','Arc Tower','Grid Square','Core Gate'],s:['Charge Pad','Data Toll','System Lag','Power Surge'],d:{h:'#06b6d4',m:'#d946ef',o:'#84cc16',t:'#6366f1'}}];
+const N0=T.map(t=>t.n),D0={...D};
+function applyBoard(){const b=BN[G.city];T.forEach((t,i)=>t.n=N0[i]);Object.assign(D,D0);if(b){PI.forEach((x,j)=>T[x].n=b.p[j]);SI.forEach((x,j)=>T[x].n=b.s[j]);Object.assign(D,b.d)}document.querySelector('.sub').textContent='Prototype: '+CITIES[G.city].n+' board. Free play, no blockchain yet.'}
+CH.push({n:'Fennec',c:'#e6b86a',a:'f',k:1},{n:'Horned Owl',c:'#a67c52',a:'o',k:1},{n:'Sun Bear',c:'#3a2a1a',a:'b',k:1},{n:'Desert Hare',c:'#e8d3a2',a:'h',k:1},{n:'River Ferret',c:'#9a6b3f',a:'t',k:1},{n:'Volt Fox',c:'#22d3ee',a:'f',k:2},{n:'Neon Owl',c:'#a78bfa',a:'o',k:2},{n:'Steel Bear',c:'#94a3b8',a:'b',k:2},{n:'Glitch Hare',c:'#f472b6',a:'h',k:2},{n:'Pulse Otter',c:'#34d399',a:'t',k:2});
+const cz0=cz;cz=function(i,s){const k=CH[i].k||0,a=k===1?'<rect x="9" y="11" width="22" height="3" rx="1.5" fill="#f5c451"/>':k===2?'<rect x="9" y="17" width="22" height="5" rx="2" fill="#22d3ee" opacity=".8"/>':'';return cz0(i,s).replace('</svg>',a+'</svg>')};
+cpick=function(){if((CH[G.ch||0].k||0)>G.city)G.ch=0;$('cp').innerHTML=CH.map((k,i)=>(k.k||0)<=G.city?`<div class="${(G.ch||0)===i?'on':''}" onclick="setch(${i})">${cz(i,44)}<br>${k.n}</div>`:'').join('')};
+const nxt0=nxt;nxt=function(){nxt0();applyBoard();init();cpick()};
+/* ---- Sound and music: all synthesized in code, no audio files, no outside assets ---- */
+let AU,mOn=true,sOn=true,mTm=null,mi=2,ms=0;
+try{const s=JSON.parse(localStorage.getItem('cdsnd')||'{}');if(s.m===false)mOn=false;if(s.s===false)sOn=false}catch(e){}
+function au(){if(!AU){try{AU=new(window.AudioContext||window.webkitAudioContext)()}catch(e){}}if(AU&&AU.state==='suspended')AU.resume();return AU}
+function tone(f,d,ty,v,t0){const a=au();if(!a)return;const t=a.currentTime+(t0||0),o=a.createOscillator(),g=a.createGain();o.type=ty||'sine';o.frequency.setValueAtTime(f,t);g.gain.setValueAtTime(.0001,t);g.gain.exponentialRampToValueAtTime(v||.08,t+.015);g.gain.exponentialRampToValueAtTime(.0001,t+d);o.connect(g);g.connect(a.destination);o.start(t);o.stop(t+d+.05)}
+const FX={click:()=>tone(560,.06,'square',.03),tick:()=>tone(320,.04,'triangle',.05),dice:()=>{for(let i=0;i<7;i++)tone(180+Math.random()*260,.05,'triangle',.06,i*.055)},coin:()=>{tone(880,.1,'square',.04);tone(1320,.2,'square',.04,.08)},pay:()=>{tone(300,.15,'sawtooth',.04);tone(200,.28,'sawtooth',.04,.12)},start:()=>[523,659,784,1047].forEach((f,i)=>tone(f,.15,'triangle',.07,i*.07)),win:()=>[523,659,784,659,784,1047].forEach((f,i)=>tone(f,.2,'triangle',.08,i*.12)),lose:()=>[392,330,262].forEach((f,i)=>tone(f,.25,'triangle',.07,i*.16))};
+function sfx(n){if(sOn&&FX[n])FX[n]()}
+function musicTick(){if(!mOn||document.hidden)return;const sc=[0,2,4,7,9],root=[262,294,330][G.city]||262;mi=Math.max(0,Math.min(9,mi+[-2,-1,-1,0,1,1,2][rnd(7)]));const f=root*Math.pow(2,(sc[mi%5]+12*Math.floor(mi/5))/12);tone(f,.5,'triangle',.035);if(ms%4===0)tone(root/2*Math.pow(2,sc[rnd(3)]/12),1.2,'sine',.04);ms++}
+function startM(){if(mOn&&!mTm&&au())mTm=setInterval(musicTick,[460,400,330][G.city]||460)}
+function stopM(){clearInterval(mTm);mTm=null}
+function lab(){$('bm').textContent=mOn?'🎵 Music on':'🎵 Music off';$('bs').textContent=sOn?'🔊 Sound on':'🔊 Sound off'}
+function svs(){try{localStorage.setItem('cdsnd',JSON.stringify({m:mOn,s:sOn}))}catch(e){}lab()}
+function tgm(){mOn=!mOn;if(mOn)startM();else stopM();svs()}
+function tgs(){sOn=!sOn;svs();sfx('click')}
+document.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;au();startM();if(b.id==='bm'||b.id==='bs'||/Roll/.test(b.textContent))return;sfx('click')},true);
+document.addEventListener('visibilitychange',()=>{if(document.hidden)stopM();else startM()});
+const log0=log;log=function(m){log0(m);if(/wins/.test(m))sfx(m.startsWith('You')?'win':'lose');else if(/passed Start/.test(m))sfx('start');else if(/bought|upgraded/.test(m))sfx('coin');else if(/paid|tax|Timeout/i.test(m))sfx('pay')};
+const play0=play;play=async function(){if(P[turn].s<=0)sfx('dice');return play0()};
+let lp='';const rd0=render;render=function(){rd0();if(P){const k=P[0].p+','+P[1].p;if(lp&&k!==lp)sfx('tick');lp=k}};
+const sv0=save;save=function(){sv0();sfx('coin')};
+function travel(f,t,cb){const o=document.createElement('div');o.id='tv';let done=false;const stars=Array.from({length:26},()=>`<span class="st" style="top:${rnd(100)}%;--d:${(.5+Math.random()*.9).toFixed(2)}s;animation-delay:-${Math.random().toFixed(2)}s"></span>`).join('');o.innerHTML=stars+`<div style="font-size:13px;opacity:.8">Leaving ${f}</div><div class="rt"><span class="dt" style="left:0"></span><span class="dt" style="right:0"></span><div class="hero"><div class="bob">${cz(G.ch||0,52)}</div></div></div><div class="ar">Arriving at ${t}…</div><small>Tap to skip</small>`;document.body.appendChild(o);if(sOn)[330,392,494,587,784].forEach((x,i)=>tone(x,.35,'triangle',.06,i*.4));const fin=()=>{if(done)return;done=true;sfx('start');o.style.opacity=0;cb&&cb();setTimeout(()=>o.remove(),550)};o.onclick=fin;setTimeout(fin,matchMedia('(prefers-reduced-motion:reduce)').matches?900:3300)}
+const PAL=[D0,BN[1].d,BN[2].d];
+function sky(pal){const hs=[30,44,26,52,36,48,28,40,34,50,30,42],cs=Object.values(pal);let x='<svg viewBox="0 0 240 70" preserveAspectRatio="none" width="100%" height="100%"><rect y="58" width="240" height="12" fill="#1b1233"/>';hs.forEach((h,i)=>{const X=i*20;x+=`<rect x="${X+1}" y="${58-h}" width="18" height="${h}" fill="${cs[i%cs.length]}"/><rect x="${X+5}" y="${62-h}" width="3" height="4" fill="#ffe08a"/><rect x="${X+11}" y="${70-h}" width="3" height="4" fill="#ffe08a"/>`});return x+'</svg>'}
+function rocket(f,t,c,cb){const o=document.createElement('div');o.id='rk';let done=false;const ko=SKY[c-1]||SKY[0],kn=SKY[c]||SKY[0];
+const st=Array.from({length:34},()=>`<span class="sx" style="left:${rnd(100)}%;--d:${(.35+Math.random()*.5).toFixed(2)}s;animation-delay:-${Math.random().toFixed(2)}s"></span>`).join('');
+const rs='<svg viewBox="0 0 60 130"><path d="M14 70 L2 108 L14 98Z" fill="#7c3aed"/><path d="M46 70 L58 108 L46 98Z" fill="#7c3aed"/><rect x="22" y="92" width="16" height="8" rx="2" fill="#5b4a8a"/><path d="M30 4 C48 28 50 60 46 92 H14 C10 60 12 28 30 4Z" fill="#f4f1ff"/><path d="M30 4 C38 14 43 24 45 34 H15 C17 24 22 14 30 4Z" fill="#7c3aed"/><rect x="14" y="78" width="32" height="5" fill="#f5c451"/><circle cx="30" cy="58" r="12" fill="#1b1233" stroke="#c4b5fd" stroke-width="3"/></svg>';
+o.innerHTML=`<div class="lay" style="background:#05030f"></div><div class="lay osk" style="background:linear-gradient(${ko[1]},${ko[0]})"></div><div class="lay dsk" style="background:linear-gradient(${kn[1]},${kn[0]})"></div><div class="lay sxw">${st}</div><div class="gnd g0">${sky(PAL[c-1]||D0)}</div><div class="gnd g1">${sky(PAL[c]||D0)}</div><div class="dust"></div><div class="rkt"><div class="rs"><div class="fl"></div>${rs}<div class="pil">${cz(G.ch||0,26)}</div></div></div><div class="cd"><span style="animation-delay:.1s">3</span><span style="animation-delay:.65s">2</span><span style="animation-delay:1.2s">1</span></div><div class="cap c1" style="animation-duration:3.6s">Launching from ${f}\u2026</div><div class="cap c2" style="animation-duration:2s;animation-delay:3.6s">Cruising through space\u2026</div><div class="cap c3" style="animation-duration:2.1s;animation-delay:5.6s">Look! ${t} ahead \u2728</div><div class="cap c4" style="animation-duration:1.9s;animation-delay:7.7s">Touchdown! Welcome to ${t}</div><small>Tap to skip</small>`;
+document.body.appendChild(o);
+if(sOn){[0,.55,1.1].forEach(x=>tone(660,.12,'square',.04,x+.1));tone(70,3,'sawtooth',.05,1.7);[220,261,329,392,523].forEach((x,i)=>tone(x,.5,'triangle',.04,2.6+i*.5));tone(90,.5,'sine',.12,8.3)}
+const end=()=>{if(done)return;done=true;sfx('start');o.style.opacity=0;cb&&cb();setTimeout(()=>o.remove(),550)};o.onclick=end;setTimeout(end,matchMedia('(prefers-reduced-motion:reduce)').matches?1200:9600)}
+const nxt1=nxt;nxt=function(){const f=CITIES[G.city].n;nxt1();rocket(f,CITIES[G.city].n,G.city,()=>{tab('m');msg='Landed in '+CITIES[G.city].n+'! Roll the dice.';render()})};
+function pv(){if(document.getElementById('rk'))return;const c=Math.max(1,Math.min(G.city+1,2));rocket(CITIES[c-1].n,CITIES[c].n,c,()=>{})}
+const DS=['Classic','Harbor Pearl','Goldleaf Gold','Neon Glow'];
+const skOK=i=>i===0||(G.w[i-1]||0)>=3;
+function dkr(){$('dk').innerHTML=DS.map((n,i)=>skOK(i)?`<button class="${(G.ds||0)===i?'':'s'}" onclick="setds(${i})">${n}</button>`:`<button class="s" disabled>\ud83d\udd12 ${n} (${G.w[i-1]||0}/3)</button>`).join('')+'<p class="lg" style="padding:0;width:100%;margin:2px 0 0">Top players unlock a dice skin in each city by winning 3 matches there.</p>'}
+function setds(i){if(skOK(i)){G.ds=i;save();dkr();dice=dHTML(1+rnd(6),1+rnd(6),0);render()}}
+dHTML=function(a,b,r){const c=(r?'r':'l')+' k'+(G.ds||0);return die(a,c)+die(b,c)};
+const fin2=fin;fin=function(m){fin2(m);if(m.startsWith('You')){const c=G.city;G.w[c]=(G.w[c]||0)+1;if(G.w[c]===3){log('Dice skin unlocked: '+DS[c+1]+'!');sfx('win')}save();dkr()}};
+/* ---- Wallet and soulbound badges (Monad Testnet). Works on the GitHub Pages site, not inside claude.ai. ---- */
+const WC={addr:'0xce14f43C3794a63Ab486Ed4B4816FF7bde1e3656',chain:'0x279f'};
+const SEL_CLAIM='0x95d4063f',SEL_HAS='0x3af0c688';
+const W={acc:null,ok:false,has:[false,false,false],msg:'',busy:false};
+const BG=[{n:'First Match',d:'Finish a match',ok:()=>G.st.some(x=>x>0)||(G.sets||0)>0},{n:'City Founder',d:'Reach Goldleaf Market',ok:()=>G.city>=1},{n:'Vault Collector',d:'Complete a sticker set',ok:()=>(G.sets||0)>=1}];
+const h32=x=>BigInt(x).toString(16).padStart(64,'0');
+const wsh=a=>a.slice(0,6)+'\u2026'+a.slice(-4);
+function wHTML(){return `<div id="wbox" class="wb"><b>Badges on Monad Testnet</b><p class="lg" style="padding:0;margin:4px 0">Test network only. Test MON has no value. Never share your seed phrase.</p>`+(W.acc?`<div style="font-size:12px;margin:4px 0">Wallet ${wsh(W.acc)} \u00b7 ${W.ok?'Monad Testnet \u2713':'Wrong network'}</div>`+BG.map((b,i)=>{const o=b.ok(),h=W.has[i];return `<div class="wr"><span>${b.n}<small>${b.d}</small></span><button class="${o&&!h?'':'s'}" ${(!o||h||W.busy)?'disabled':''} onclick="wClaim(${i})">${h?'Claimed \u2713':o?'Claim':'\ud83d\udd12 Locked'}</button></div>`}).join(''):'<button onclick="wConnect()">\ud83d\udd17 Connect wallet</button>')+`<div style="font-size:12px;margin-top:6px">${W.msg||''}</div></div>`}
+function wr(){const d=document.getElementById('wbox');if(d)d.outerHTML=wHTML()}
+async function wChain(){const e=window.ethereum;let id=await e.request({method:'eth_chainId'});if(id.toLowerCase()!==WC.chain){try{await e.request({method:'wallet_switchEthereumChain',params:[{chainId:WC.chain}]})}catch(x){if(x&&(x.code===4902||x.code===-32603)){await e.request({method:'wallet_addEthereumChain',params:[{chainId:WC.chain,chainName:'Monad Testnet',nativeCurrency:{name:'Monad',symbol:'MON',decimals:18},rpcUrls:['https://testnet-rpc.monad.xyz'],blockExplorerUrls:['https://testnet.monadvision.com']}]})}else throw x}id=await e.request({method:'eth_chainId'})}W.ok=id.toLowerCase()===WC.chain}
+async function wRefresh(){const e=window.ethereum;if(!W.acc||!W.ok)return;for(let i=0;i<3;i++){try{const r=await e.request({method:'eth_call',params:[{to:WC.addr,data:SEL_HAS+h32(W.acc)+h32(i)},'latest']});W.has[i]=BigInt(r)!==0n}catch(x){}}}
+async function wConnect(){const e=window.ethereum;if(!e){W.msg='No wallet found. On a PC, install MetaMask. On a phone, open this page inside the MetaMask app browser. This does not work inside claude.ai.';return wr()}try{const a=await e.request({method:'eth_requestAccounts'});W.acc=a[0];await wChain();await wRefresh();W.msg=''}catch(x){W.msg=(x&&x.message)||'Connection cancelled'}wr()}
+async function wClaim(i){if(W.busy||!window.ethereum)return;const e=window.ethereum;W.busy=true;try{W.msg='Confirm in your wallet\u2026';wr();await wChain();if(!W.ok)throw new Error('Please switch to Monad Testnet');const h=await e.request({method:'eth_sendTransaction',params:[{from:W.acc,to:WC.addr,data:SEL_CLAIM+h32(i)}]});W.msg='Sent. Waiting for confirmation\u2026';wr();for(let k=0;k<60;k++){await new Promise(r=>setTimeout(r,1500));const rc=await e.request({method:'eth_getTransactionReceipt',params:[h]});if(rc){W.msg=rc.status==='0x1'?'Badge claimed! \ud83c\udf89':'Transaction failed (maybe already claimed).';break}}await wRefresh();if(W.has[i])sfx('win')}catch(x){W.msg=(x&&x.message)||'Cancelled'}W.busy=false;wr()}
+if(window.ethereum&&window.ethereum.on){window.ethereum.on('accountsChanged',a=>{W.acc=a[0]||null;W.has=[false,false,false];wRefresh().then(wr)});window.ethereum.on('chainChanged',()=>{wChain().then(wRefresh).then(wr)})}
+const album1=album;album=function(){album1();const v=$('av');if(v)v.insertAdjacentHTML('afterbegin',wHTML())};
+G.w=G.w||[0,0,0];G.ds=G.ds||0;dkr();
+lab();
+applyBoard();
+cpick();
+init();
+</script></body></html>
